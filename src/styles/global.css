@@ -114,26 +114,6 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-
-  /* Cores Customizadas */
-  --color-surface: #121221;
-  --color-surface-dim: #121221;
-  --color-surface-bright: #383849;
-  --color-on-surface: #e3e0f7;
-  
-  --color-primary: #ffffff;
-  --color-primary-container: #f3deda;
-  
-  --color-secondary: #e2bebe;
-  --color-secondary-container: #5a4041;
-  
-  --color-background: #121221;
-  /* Fontes */
-  --font-display: "Noto Serif", serif;
-  --font-body: "Manrope", sans-serif;
-  /* Border Radius (Arredondamento) */
-  --radius-xl: 1.5rem;
-  --radius-2xl: 2rem;
 }
 
 @layer base {
