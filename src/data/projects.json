@@ -1,8 +1,8 @@
 {
-  "title": "Projetos",
+  "title": "Projetos Em Destaque",
   "items": [
     {
-      "name": "Pulse Dashboard",
+      "name": "OctoManager",
       "description": "Painel de métricas com foco em leitura rápida e densidade visual controlada.",
       "tags": ["Astro", "Vue", "Tailwind"]
     },

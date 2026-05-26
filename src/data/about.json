@@ -1,6 +1,6 @@
 {
   "avatar": "https://github.com/DavyAndrade.png",
-  "title": "Quem sou eu",
+  "title": "Sobre Mim",
   "body": "Me chamo Davy Andrade e sou um Desenvolvedor front-end apaixonado por criar interfaces modernas e funcionais. Resido no Rio de Janeiro e atualmente cursando Análise e Desenvolvimento de Sistemas na FAETERJ-Rio, no quarto período. Estou desenvolvendo habilidades com Flutter para desenvolvimento Mobile e Desktop. Também estou aprendendo a trabalhar com Agentes (Agents), MCP e Skills.", 
   "tags": ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "Python", "React", "Vue", "Next.js", "Astro", "Tailwind", "SCSS", "Flutter", "Node.js", "Express", "MySQL", "SQLite", "Vite", "Vitest", "npm", "Yarn", "pnpm", "Bun", "Git", "GitHub", "Linux", "Windows", "Bash", "Vercel", "Netlify"]
 }

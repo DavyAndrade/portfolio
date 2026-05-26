@@ -1,16 +1,16 @@
 {
-  "title": "Experiencia",
+  "title": "Minha Experiência",
   "items": [
     {
-      "role": "Front-end Engineer",
-      "company": "Studio Norte",
-      "period": "2023 - Atual",
+      "role": "Desenvolvedor Front-end",
+      "company": "Fundação Oswaldo Cruz (Fiocruz)",
+      "period": "Mai 2026 - Momento",
       "summary": "Arquitetura de componentes, padronizacao de UI e melhorias de performance em produtos SaaS."
     },
     {
-      "role": "UI Developer",
-      "company": "Labs Meridian",
-      "period": "2021 - 2023",
+      "role": "Desenvolvedor Front-end Júnior",
+      "company": "FuzzyLab",
+      "period": "Ago 2025 - Momento",
       "summary": "Construcao de interfaces de alto contraste e integracao com design system."
     }
   ]
