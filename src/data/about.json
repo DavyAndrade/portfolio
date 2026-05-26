@@ -1,6 +1,8 @@
 {
-  "title": "Sobre",
-  "body": "Sou desenvolvedor front-end com foco em produto e engenharia de interface. Gosto de transformar sistemas complexos em experiências claras, com tipografia compacta, contraste forte e atenção aos estados.",
+  "title": "Quem sou eu",
+  "body": "Me chamo Davy Andrade e sou um Desenvolvedor front-end apaixonado por criar interfaces modernas e funcionais. Resido no Rio de Janeiro e atualmente cursando Análise e Desenvolvimento de Sistemas na FAETERJ-Rio, no quarto período. Estou desenvolvendo habilidades com Flutter para desenvolvimento multiplataforma e aprendendo a trabalhar com Agentes (Agents), MCP e Skills.",
+  "location": "📍 Rio de Janeiro, Brasil · 🎮 Entusiasta de games & RPG",
+  "tags": ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "Python", "React", "Vue", "Next.js", "Astro", "Tailwind", "SCSS", "Flutter", "Node.js", "Express", "MySQL", "SQLite", "Vite", "Vitest", "npm", "Yarn", "pnpm", "Bun", "Git", "GitHub", "Linux", "Windows", "Bash", "Vercel", "Netlify"],
   "highlights": [
     "UI systems e componentes reutilizáveis",
     "Performance e acessibilidade no centro",

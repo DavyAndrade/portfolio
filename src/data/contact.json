@@ -1,0 +1,23 @@
+{
+  "title": "Contato",
+  "heading": "Vamos trabalhar juntos?",
+  "description": "Estou disponível para novos projetos, freelas e oportunidades. Me chame no email ou redes sociais.",
+  "email": "davyandrade.dev@gmail.com",
+  "social": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/DavyAndrade",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/davy-andrade/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:davyandrade.dev@gmail.com",
+      "icon": "mail"
+    }
+  ]
+}
