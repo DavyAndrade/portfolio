@@ -1,11 +1,6 @@
 {
+  "avatar": "https://github.com/DavyAndrade.png",
   "title": "Quem sou eu",
-  "body": "Me chamo Davy Andrade e sou um Desenvolvedor front-end apaixonado por criar interfaces modernas e funcionais. Resido no Rio de Janeiro e atualmente cursando Análise e Desenvolvimento de Sistemas na FAETERJ-Rio, no quarto período. Estou desenvolvendo habilidades com Flutter para desenvolvimento multiplataforma e aprendendo a trabalhar com Agentes (Agents), MCP e Skills.",
-  "location": "📍 Rio de Janeiro, Brasil · 🎮 Entusiasta de games & RPG",
-  "tags": ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "Python", "React", "Vue", "Next.js", "Astro", "Tailwind", "SCSS", "Flutter", "Node.js", "Express", "MySQL", "SQLite", "Vite", "Vitest", "npm", "Yarn", "pnpm", "Bun", "Git", "GitHub", "Linux", "Windows", "Bash", "Vercel", "Netlify"],
-  "highlights": [
-    "UI systems e componentes reutilizáveis",
-    "Performance e acessibilidade no centro",
-    "Design dark-first e orientado a conteúdo"
-  ]
+  "body": "Me chamo Davy Andrade e sou um Desenvolvedor front-end apaixonado por criar interfaces modernas e funcionais. Resido no Rio de Janeiro e atualmente cursando Análise e Desenvolvimento de Sistemas na FAETERJ-Rio, no quarto período. Estou desenvolvendo habilidades com Flutter para desenvolvimento Mobile e Desktop. Também estou aprendendo a trabalhar com Agentes (Agents), MCP e Skills.", 
+  "tags": ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "Python", "React", "Vue", "Next.js", "Astro", "Tailwind", "SCSS", "Flutter", "Node.js", "Express", "MySQL", "SQLite", "Vite", "Vitest", "npm", "Yarn", "pnpm", "Bun", "Git", "GitHub", "Linux", "Windows", "Bash", "Vercel", "Netlify"]
 }
