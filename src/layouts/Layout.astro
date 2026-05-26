@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 ---
 
 <!doctype html>
@@ -11,16 +13,13 @@ import "../styles/global.css";
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>Davy Andrade</title>
-    <!-- Dentro do <head> do Layout.astro -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
   </head>
-  <body class="scroll-smooth bg-zinc-950">
-    <slot />
+  <body class="scroll-smooth bg-zinc-950" data-viewer="site">
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
 

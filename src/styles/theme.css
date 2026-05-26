@@ -1,0 +1,58 @@
+:root {
+  --spotify-green: #1ed760;
+  --spotify-green-border: #1db954;
+  --spotify-black: #121212;
+  --spotify-surface-dark: #181818;
+  --spotify-surface-mid: #1f1f1f;
+  --spotify-card-dark: #252525;
+  --spotify-card-mid: #272727;
+  --spotify-border-gray: #4d4d4d;
+  --spotify-border-light: #7c7c7c;
+  --spotify-separator: #b3b3b3;
+  --spotify-surface-light: #eeeeee;
+  --spotify-text-base: #ffffff;
+  --spotify-text-muted: #b3b3b3;
+  --spotify-text-near-white: #cbcbcb;
+  --spotify-text-bright: #fdfdfd;
+  --spotify-text-negative: #f3727f;
+  --spotify-text-warning: #ffa42b;
+  --spotify-text-announcement: #539df5;
+  --spotify-shadow-heavy: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+  --spotify-shadow-medium: rgba(0, 0, 0, 0.3) 0px 8px 8px;
+  --spotify-shadow-inset: rgb(18, 18, 18) 0px 1px 0px, rgb(124, 124, 124) 0px 0px 0px 1px inset;
+  --spotify-font-title: "SpotifyMixUITitle", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+  --spotify-font-ui: "SpotifyMixUI", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+  --spotify-radius-min: 2px;
+  --spotify-radius-subtle: 4px;
+  --spotify-radius-standard: 6px;
+  --spotify-radius-comfortable: 8px;
+  --spotify-radius-medium: 10px;
+  --spotify-radius-large: 20px;
+  --spotify-radius-pill: 500px;
+  --spotify-radius-full: 9999px;
+  --spotify-radius-circle: 50%;
+  --spotify-spacing-1: 1px;
+  --spotify-spacing-2: 2px;
+  --spotify-spacing-3: 3px;
+  --spotify-spacing-4: 4px;
+  --spotify-spacing-5: 5px;
+  --spotify-spacing-6: 6px;
+  --spotify-spacing-8: 8px;
+  --spotify-spacing-10: 10px;
+  --spotify-spacing-12: 12px;
+  --spotify-spacing-14: 14px;
+  --spotify-spacing-15: 15px;
+  --spotify-spacing-16: 16px;
+  --spotify-spacing-20: 20px;
+  --spotify-button-uppercase-tracking-min: 1.4px;
+  --spotify-button-uppercase-tracking-max: 2px;
+}
+
+.dark {
+  --spotify-background: var(--spotify-black);
+  --spotify-surface: var(--spotify-surface-dark);
+  --spotify-surface-alt: var(--spotify-surface-mid);
+  --spotify-text-primary: var(--spotify-text-base);
+  --spotify-text-secondary: var(--spotify-text-muted);
+  --spotify-accent: var(--spotify-green);
+}

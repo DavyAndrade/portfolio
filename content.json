@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Davy Andrade",
+    "subtitle": "Desenvolvedor Front-end",
+    "description": "Crio interfaces densas, rápidas e acessíveis com foco em experiência de produto. Base em Astro, Vue e Tailwind, com design escuro e atmosfera imersiva.",
+    "ctaPrimary": "Ver projetos",
+    "ctaSecondary": "Entrar em contato"
+  },
+  "about": {
+    "title": "Sobre",
+    "body": "Sou desenvolvedor front-end com foco em produto e engenharia de interface. Gosto de transformar sistemas complexos em experiências claras, com tipografia compacta, contraste forte e atenção aos estados.",
+    "highlights": [
+      "UI systems e componentes reutilizáveis",
+      "Performance e acessibilidade no centro",
+      "Design dark-first e orientado a conteúdo"
+    ]
+  },
+  "projects": {
+    "title": "Projetos",
+    "items": [
+      {
+        "name": "Pulse Dashboard",
+        "description": "Painel de métricas com foco em leitura rápida e densidade visual controlada.",
+        "tags": ["Astro", "Vue", "Tailwind"]
+      },
+      {
+        "name": "Orbit Docs",
+        "description": "Sistema de documentação com navegação objetiva e busca contextual.",
+        "tags": ["Vite", "TypeScript", "UI"]
+      },
+      {
+        "name": "Echo Player",
+        "description": "Interface musical dark-first com microinteracoes e controles em pill.",
+        "tags": ["Vue", "Motion", "Design"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": [
+      {
+        "role": "Front-end Engineer",
+        "company": "Studio Norte",
+        "period": "2023 - Atual",
+        "summary": "Arquitetura de componentes, padronizacao de UI e melhorias de performance em produtos SaaS."
+      },
+      {
+        "role": "UI Developer",
+        "company": "Labs Meridian",
+        "period": "2021 - 2023",
+        "summary": "Construcao de interfaces de alto contraste e integracao com design system."
+      }
+    ]
+  },
+  "footer": {
+    "title": "Davy Andrade",
+    "cta": "Disponivel para novos projetos em 2026.",
+    "email": "davyandrade.dev@gmail.com"
+  }
+}
