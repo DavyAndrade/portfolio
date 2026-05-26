@@ -1,4 +1,29 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@catppuccin/tailwindcss/mocha.css";
 
 @custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-green: var(--catppuccin-color-green);
+  --color-green-border: var(--catppuccin-color-green);
+  --color-surface: var(--catppuccin-color-mantle);
+  --color-surface-mid: var(--catppuccin-color-base);
+  --color-card-dark: var(--catppuccin-color-surface0);
+  --color-border-gray: var(--catppuccin-color-surface1);
+  --color-border-light: var(--catppuccin-color-overlay0);
+  --color-separator: var(--catppuccin-color-overlay2);
+  --color-muted: var(--catppuccin-color-subtext0);
+  --color-near-white: var(--catppuccin-color-subtext1);
+  --color-negative: var(--catppuccin-color-red);
+  --color-warning: var(--catppuccin-color-peach);
+  --color-info: var(--catppuccin-color-blue);
+  --color-surface-light: var(--catppuccin-color-base);
+  --font-title: var(--spotify-font-title);
+  --font-ui: var(--spotify-font-ui);
+  --radius-pill: var(--spotify-radius-pill);
+  --radius-circle: var(--spotify-radius-circle);
+  --shadow-medium: var(--spotify-shadow-medium);
+  --shadow-heavy: var(--spotify-shadow-heavy);
+  --shadow-inset: var(--spotify-shadow-inset);
+}
