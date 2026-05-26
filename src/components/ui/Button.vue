@@ -12,7 +12,7 @@ const buttonVariants = cva(
         "dark-pill": "rounded-full bg-surface-mid text-white shadow-medium hover:brightness-110 hover:shadow-heavy",
         "browse": "rounded-pill bg-surface text-white px-[43px] shadow-medium hover:brightness-110 hover:shadow-heavy",
         "outlined": "rounded-full border border-border-light text-white hover:border-white hover:shadow-heavy",
-        "play-circle": "rounded-full bg-surface-mid text-white shadow-heavy hover:brightness-110",
+        "play-circle": "rounded-full bg-green text-black shadow-heavy hover:brightness-110",
       },
       size: {
         default: "px-6 py-3 text-xs leading-none",
