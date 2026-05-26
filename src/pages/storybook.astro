@@ -1,38 +1,65 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardAction } from "../components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+  CardAction,
+} from "../components/ui/card";
 import Typography from "../components/ui/Typography.vue";
 import Button from "../components/ui/Button.vue";
 import Input from "../components/ui/Input.vue";
 ---
 
-<Layout title="Design System">
-  
-
+<Layout title="Storybook - Portfolio">
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
   </script>
 
   <!-- Noise overlay -->
-  <div class="pointer-events-none fixed inset-0 z-100 opacity-[0.035] mix-blend-overlay" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBudW1PY3RhdmVzPSI0IiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iMCIgLz48L3N2Zz4=); background-repeat: repeat; background-size: 256px 256px;"></div>
+  <div
+    class="pointer-events-none fixed inset-0 z-100 opacity-[0.035] mix-blend-overlay"
+    style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBudW1PY3RhdmVzPSI0IiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iMCIgLz48L3N2Zz4=); background-repeat: repeat; background-size: 256px 256px;"
+  >
+  </div>
 
-  <nav class="fixed top-4 inset-x-4 z-50 mx-auto flex h-14 max-w-6xl items-center justify-between rounded-full border border-white/10 bg-black/70 px-6 shadow-heavy backdrop-blur reveal">
-    <a class="text-sm font-bold uppercase tracking-[0.15em] text-white" href="#">DESIGN.md</a>
-    <ul class="hidden items-center gap-6 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-muted sm:flex">
+  <nav
+    class="fixed top-4 inset-x-4 z-50 mx-auto flex h-14 max-w-6xl items-center justify-between rounded-full border border-white/10 bg-black/70 px-6 shadow-heavy backdrop-blur reveal"
+  >
+    <a class="text-sm font-bold uppercase tracking-[0.15em] text-white" href="#"
+      >DESIGN.md</a
+    >
+    <ul
+      class="hidden items-center gap-6 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-muted sm:flex"
+    >
       <li><a class="transition hover:text-white" href="#colors">Colors</a></li>
-      <li><a class="transition hover:text-white" href="#typography">Typography</a></li>
-      <li><a class="transition hover:text-white" href="#buttons">Buttons</a></li>
+      <li>
+        <a class="transition hover:text-white" href="#typography">Typography</a>
+      </li>
+      <li>
+        <a class="transition hover:text-white" href="#buttons">Buttons</a>
+      </li>
       <li><a class="transition hover:text-white" href="#cards">Cards</a></li>
       <li><a class="transition hover:text-white" href="#forms">Forms</a></li>
-      <li><a class="transition hover:text-white" href="#spacing">Spacing</a></li>
+      <li>
+        <a class="transition hover:text-white" href="#spacing">Spacing</a>
+      </li>
       <li><a class="transition hover:text-white" href="#radius">Radius</a></li>
       <li><a class="transition hover:text-white" href="#depth">Depth</a></li>
     </ul>
@@ -40,16 +67,36 @@ import Input from "../components/ui/Input.vue";
   </nav>
 
   <!-- Hero -->
-  <section class="relative flex min-h-screen flex-col items-center justify-center gap-6 overflow-hidden px-6 text-center">
-    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 80% 50% at 50% 40%, color-mix(in srgb, var(--catppuccin-color-mauve) 12%, transparent), transparent 70%)"></div>
-    <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 50% 30% at 50% 30%, color-mix(in srgb, var(--catppuccin-color-mauve) 8%, transparent), transparent 60%); animation: hero-glow 4s ease-in-out infinite"></div>
+  <section
+    class="relative flex min-h-screen flex-col items-center justify-center gap-6 overflow-hidden px-6 text-center"
+  >
+    <div
+      class="pointer-events-none absolute inset-0"
+      style="background: radial-gradient(ellipse 80% 50% at 50% 40%, color-mix(in srgb, var(--catppuccin-color-mauve) 12%, transparent), transparent 70%)"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-0"
+      style="background: radial-gradient(ellipse 50% 30% at 50% 30%, color-mix(in srgb, var(--catppuccin-color-mauve) 8%, transparent), transparent 60%); animation: hero-glow 4s ease-in-out infinite"
+    >
+    </div>
     <div class="flex flex-col items-center gap-5 reveal">
-      <span class="inline-block rounded-full bg-green/10 px-4 py-1 text-[0.6rem] font-bold uppercase tracking-[0.25em] text-green">Design Token Catalog</span>
-      <h1 class="max-w-3xl font-title text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-        Design System<br>Inspired by <span class="text-green" style="animation: pulse-glow 3s ease-in-out infinite">Catppuccin</span>
+      <span
+        class="inline-block rounded-full bg-green/10 px-4 py-1 text-[0.6rem] font-bold uppercase tracking-[0.25em] text-green"
+        >Design Token Catalog</span
+      >
+      <h1
+        class="max-w-3xl font-title text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+      >
+        Design System<br />Inspired by <span
+          class="text-green"
+          style="animation: pulse-glow 3s ease-in-out infinite">Catppuccin</span
+        >
       </h1>
       <p class="max-w-xl text-base text-muted sm:text-lg">
-        A design token catalog generated from <span class="font-mono text-xs text-near-white">DESIGN.md</span>. Every color, font, and component — visualized in mocha dark.
+        A design token catalog generated from <span
+          class="font-mono text-xs text-near-white">DESIGN.md</span
+        >. Every color, font, and component — visualized in mocha dark.
       </p>
     </div>
     <div class="reveal reveal-delay-1 flex items-center gap-3">
@@ -61,14 +108,23 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Colors -->
-  <section id="colors" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="colors"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
       <Typography variant="sectionLabel">01 / Colors</Typography>
       <Typography variant="h1" as="h2">Color Palette</Typography>
-      <Typography variant="muted" class="max-w-lg">Every color token in the system — brand, surface, text, and semantic roles.</Typography>
+      <Typography variant="muted" class="max-w-lg"
+        >Every color token in the system — brand, surface, text, and semantic
+        roles.</Typography
+      >
     </div>
     <div class="reveal reveal-delay-1">
-      <span class="mb-4 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted">Brand</span>
+      <span
+        class="mb-4 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted"
+        >Brand</span
+      >
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Card variant="surface" padding="none" hover class="overflow-hidden">
           <div class="color-swatch-block h-24 bg-green"></div>
@@ -87,7 +143,10 @@ import Input from "../components/ui/Input.vue";
           </CardContent>
         </Card>
         <Card variant="surface" padding="none" hover class="overflow-hidden">
-          <div class="color-swatch-block h-24 border border-white/10 bg-surface"></div>
+          <div
+            class="color-swatch-block h-24 border border-white/10 bg-surface"
+          >
+          </div>
           <CardContent class="flex flex-col gap-0.5 p-4">
             <CardTitle>Surface</CardTitle>
             <CardDescription>--color-surface</CardDescription>
@@ -105,7 +164,10 @@ import Input from "../components/ui/Input.vue";
       </div>
     </div>
     <div class="reveal reveal-delay-2">
-      <span class="mb-4 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted">Text &amp; Semantic</span>
+      <span
+        class="mb-4 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted"
+        >Text &amp; Semantic</span
+      >
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         <Card variant="surface" padding="none" hover class="overflow-hidden">
           <div class="color-swatch-block h-24 bg-white"></div>
@@ -154,28 +216,41 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Typography -->
-  <section id="typography" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="typography"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
       <Typography variant="sectionLabel">02 / Typography</Typography>
       <Typography variant="h1" as="h2">Typography Scale</Typography>
-      <Typography variant="muted" class="max-w-lg">Font families: <span class="font-title text-white">font-title</span> (display) + <span class="font-ui text-white">font-ui</span> (body). Compact and functional.</Typography>
+      <Typography variant="muted" class="max-w-lg"
+        >Font families: <span class="font-title text-white">font-title</span> (display)
+        + <span class="font-ui text-white">font-ui</span> (body). Compact and functional.</Typography
+      >
     </div>
     <div class="flex flex-col gap-4">
       <Card class="type-sample">
         <CardHeader>
-          <CardTitle class="font-title text-2xl font-bold text-white">Section Title — Your Playlists</CardTitle>
+          <CardTitle class="font-title text-2xl font-bold text-white"
+            >Section Title — Your Playlists</CardTitle
+          >
         </CardHeader>
         <CardDescription>Title — 24px / 700 / font-title</CardDescription>
       </Card>
       <Card class="type-sample">
         <CardHeader>
-          <CardTitle class="font-ui text-lg font-semibold leading-tight text-white">Feature Heading — Made for You</CardTitle>
+          <CardTitle
+            class="font-ui text-lg font-semibold leading-tight text-white"
+            >Feature Heading — Made for You</CardTitle
+          >
         </CardHeader>
         <CardDescription>Feature — 18px / 600 / 1.30</CardDescription>
       </Card>
       <Card class="type-sample">
         <CardHeader>
-          <CardTitle class="font-ui text-base font-bold text-white">Body Bold — Liked Songs</CardTitle>
+          <CardTitle class="font-ui text-base font-bold text-white"
+            >Body Bold — Liked Songs</CardTitle
+          >
         </CardHeader>
         <CardDescription>Body Bold — 16px / 700</CardDescription>
       </Card>
@@ -187,19 +262,30 @@ import Input from "../components/ui/Input.vue";
       </Card>
       <Card class="type-sample">
         <CardHeader>
-          <CardTitle class="font-ui text-sm font-bold uppercase tracking-widest text-white">SHUFFLE PLAY</CardTitle>
+          <CardTitle
+            class="font-ui text-sm font-bold uppercase tracking-widest text-white"
+            >SHUFFLE PLAY</CardTitle
+          >
         </CardHeader>
-        <CardDescription>Button Uppercase — 14px / 700 / uppercase / +1.4px</CardDescription>
+        <CardDescription
+          >Button Uppercase — 14px / 700 / uppercase / +1.4px</CardDescription
+        >
       </Card>
       <Card class="type-sample">
         <CardContent>
-          <div class="font-ui text-xs font-bold text-muted">Small Bold — 1,234 songs</div>
+          <div class="font-ui text-xs font-bold text-muted">
+            Small Bold — 1,234 songs
+          </div>
         </CardContent>
         <CardDescription>Small Bold — 12px / 700</CardDescription>
       </Card>
       <Card class="type-sample">
         <CardContent>
-          <div class="font-ui text-[0.66rem] font-semibold capitalize text-muted">Badge — Playlist</div>
+          <div
+            class="font-ui text-[0.66rem] font-semibold capitalize text-muted"
+          >
+            Badge — Playlist
+          </div>
         </CardContent>
         <CardDescription>Badge — 10.5px / 600 / capitalize</CardDescription>
       </Card>
@@ -209,28 +295,48 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Buttons -->
-  <section id="buttons" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="buttons"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
       <Typography variant="sectionLabel">03 / Buttons</Typography>
       <Typography variant="h1" as="h2">Button Variants</Typography>
-      <Typography variant="muted" class="max-w-lg">Pill geometry, uppercase labels, and a single green accent. Four distinct personalities.</Typography>
+      <Typography variant="muted" class="max-w-lg"
+        >Pill geometry, uppercase labels, and a single green accent. Four
+        distinct personalities.</Typography
+      >
     </div>
     <div class="reveal reveal-delay-1 flex flex-wrap items-center gap-5">
       <div class="flex flex-col items-center gap-2">
         <Button variant="green-pill" as="a" href="#">Shuffle Play</Button>
-        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Green Pill</span>
+        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator"
+          >Green Pill</span
+        >
       </div>
       <div class="flex flex-col items-center gap-2">
         <Button variant="dark-pill" as="a" href="#">Browse</Button>
-        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Dark Pill</span>
+        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator"
+          >Dark Pill</span
+        >
       </div>
       <div class="flex flex-col items-center gap-2">
         <Button variant="outlined" as="a" href="#">Follow</Button>
-        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Outlined</span>
+        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator"
+          >Outlined</span
+        >
       </div>
       <div class="flex flex-col items-center gap-2">
-        <Button variant="play-circle" size="icon" as="a" href="#" aria-label="Play">▶</Button>
-        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Play Circle</span>
+        <Button
+          variant="play-circle"
+          size="icon"
+          as="a"
+          href="#"
+          aria-label="Play">▶</Button
+        >
+        <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator"
+          >Play Circle</span
+        >
       </div>
     </div>
   </section>
@@ -238,28 +344,42 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Cards -->
-  <section id="cards" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="cards"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
       <Typography variant="sectionLabel">04 / Cards</Typography>
       <Typography variant="h1" as="h2">Card Examples</Typography>
-      <Typography variant="muted" class="max-w-lg">Surface containers with optional elevation. Hover lifts them into focus.</Typography>
+      <Typography variant="muted" class="max-w-lg"
+        >Surface containers with optional elevation. Hover lifts them into
+        focus.</Typography
+      >
     </div>
     <div class="reveal reveal-delay-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       <Card variant="surface" padding="sm" hover>
         <CardTitle>Discover Weekly</CardTitle>
-        <CardDescription class="mt-1">Your personal playlist, updated every Monday.</CardDescription>
+        <CardDescription class="mt-1"
+          >Your personal playlist, updated every Monday.</CardDescription
+        >
       </Card>
       <Card variant="surface" padding="sm" hover>
         <CardTitle>Release Radar</CardTitle>
-        <CardDescription class="mt-1">New releases from artists you follow.</CardDescription>
+        <CardDescription class="mt-1"
+          >New releases from artists you follow.</CardDescription
+        >
       </Card>
       <Card variant="surface" padding="sm" hover>
         <CardTitle>Daily Mix 1</CardTitle>
-        <CardDescription class="mt-1">Made for you based on your listening.</CardDescription>
+        <CardDescription class="mt-1"
+          >Made for you based on your listening.</CardDescription
+        >
       </Card>
       <Card variant="surface" padding="sm" hover>
         <CardTitle>Liked Songs</CardTitle>
-        <CardDescription class="mt-1">Your saved songs collection.</CardDescription>
+        <CardDescription class="mt-1"
+          >Your saved songs collection.</CardDescription
+        >
       </Card>
     </div>
   </section>
@@ -267,17 +387,25 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Forms -->
-  <section id="forms" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="forms"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
       <Typography variant="sectionLabel">05 / Forms</Typography>
       <Typography variant="h1" as="h2">Form Elements</Typography>
-      <Typography variant="muted" class="max-w-lg">Pill-shaped inputs with inset shadow borders. Focus and error states via colored rings.</Typography>
+      <Typography variant="muted" class="max-w-lg"
+        >Pill-shaped inputs with inset shadow borders. Focus and error states
+        via colored rings.</Typography
+      >
     </div>
     <div class="reveal reveal-delay-1 flex flex-col gap-6">
       <div class="flex flex-col gap-2">
         <Typography variant="label">Search</Typography>
         <Input type="search" placeholder="Artists, songs, or podcasts" />
-        <Typography variant="caption">Default (inset border) → Focus (green ring)</Typography>
+        <Typography variant="caption"
+          >Default (inset border) → Focus (green ring)</Typography
+        >
       </div>
       <div class="flex flex-col gap-2">
         <Typography variant="label">Email</Typography>
@@ -294,31 +422,51 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Spacing -->
-  <section id="spacing" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="spacing"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
       <Typography variant="sectionLabel">06 / Spacing</Typography>
       <Typography variant="h1" as="h2">Spacing Scale</Typography>
-      <Typography variant="muted" class="max-w-lg">Base unit is 8px. From tight compression to comfortable breathing room.</Typography>
+      <Typography variant="muted" class="max-w-lg"
+        >Base unit is 8px. From tight compression to comfortable breathing room.</Typography
+      >
     </div>
     <div class="reveal reveal-delay-1 flex items-end gap-4">
       <div class="flex flex-col items-center gap-2">
-        <div class="h-10 w-1 rounded-t-sm bg-green transition-all duration-300 hover:h-14"></div>
+        <div
+          class="h-10 w-1 rounded-t-sm bg-green transition-all duration-300 hover:h-14"
+        >
+        </div>
         <span class="text-xs text-muted">4</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="h-10 w-2 rounded-t-sm bg-green transition-all duration-300 hover:h-14"></div>
+        <div
+          class="h-10 w-2 rounded-t-sm bg-green transition-all duration-300 hover:h-14"
+        >
+        </div>
         <span class="text-xs text-muted">8</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="h-10 w-3 rounded-t-sm bg-green transition-all duration-300 hover:h-14"></div>
+        <div
+          class="h-10 w-3 rounded-t-sm bg-green transition-all duration-300 hover:h-14"
+        >
+        </div>
         <span class="text-xs text-muted">12</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="h-10 w-4 rounded-t-sm bg-green transition-all duration-300 hover:h-14"></div>
+        <div
+          class="h-10 w-4 rounded-t-sm bg-green transition-all duration-300 hover:h-14"
+        >
+        </div>
         <span class="text-xs text-muted">16</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="h-10 w-5 rounded-t-sm bg-green transition-all duration-300 hover:h-14"></div>
+        <div
+          class="h-10 w-5 rounded-t-sm bg-green transition-all duration-300 hover:h-14"
+        >
+        </div>
         <span class="text-xs text-muted">20</span>
       </div>
     </div>
@@ -327,61 +475,111 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Radius -->
-  <section id="radius" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="radius"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
       <Typography variant="sectionLabel">07 / Radius</Typography>
       <Typography variant="h1" as="h2">Border Radius</Typography>
-      <Typography variant="muted" class="max-w-lg">From sharp 2px badges to pill-like 500px and full circles at 50%.</Typography>
+      <Typography variant="muted" class="max-w-lg"
+        >From sharp 2px badges to pill-like 500px and full circles at 50%.</Typography
+      >
     </div>
     <div class="reveal reveal-delay-1 flex flex-wrap items-end gap-6">
       <div class="flex flex-col items-center gap-2">
-        <div class="h-12 w-12 bg-green transition-all duration-300 hover:scale-110" style="border-radius:2px"></div>
+        <div
+          class="h-12 w-12 bg-green transition-all duration-300 hover:scale-110"
+          style="border-radius:2px"
+        >
+        </div>
         <span class="text-xs text-muted">2px</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="h-12 w-12 rounded-md bg-green transition-all duration-300 hover:scale-110"></div>
+        <div
+          class="h-12 w-12 rounded-md bg-green transition-all duration-300 hover:scale-110"
+        >
+        </div>
         <span class="text-xs text-muted">6px</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="h-12 w-12 rounded-lg bg-green transition-all duration-300 hover:scale-110"></div>
+        <div
+          class="h-12 w-12 rounded-lg bg-green transition-all duration-300 hover:scale-110"
+        >
+        </div>
         <span class="text-xs text-muted">8px</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="h-12 w-24 rounded-pill bg-green transition-all duration-300 hover:scale-105"></div>
+        <div
+          class="h-12 w-24 rounded-pill bg-green transition-all duration-300 hover:scale-105"
+        >
+        </div>
         <span class="text-xs text-muted">500px</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="flex h-12 w-12 items-center justify-center rounded-circle bg-green text-xs font-bold transition-all duration-300 hover:scale-110"></div>
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-circle bg-green text-xs font-bold transition-all duration-300 hover:scale-110"
+        >
+        </div>
         <span class="text-xs text-muted">50%</span>
       </div>
     </div>
   </section>
 
   <!-- Motion / Animation Tokens -->
-  <section id="motion" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="motion"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
-      <span class="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-muted">08 / Motion</span>
+      <span
+        class="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-muted"
+        >08 / Motion</span
+      >
       <h2 class="font-title text-3xl font-bold text-white">Animation Tokens</h2>
-      <p class="max-w-lg text-sm text-muted">Defined in <span class="font-mono text-xs text-near-white">@theme</span>. Use for entry, exit, and staggered reveals.</p>
+      <p class="max-w-lg text-sm text-muted">
+        Defined in <span class="font-mono text-xs text-near-white">@theme</span
+        >. Use for entry, exit, and staggered reveals.
+      </p>
     </div>
     <div class="reveal reveal-delay-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       <Card class="flex-col items-center gap-3 text-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-green text-lg font-bold text-black animate-fade-in" style="animation-iteration-count:infinite;animation-direction:alternate">fade</div>
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-xl bg-green text-lg font-bold text-black animate-fade-in"
+          style="animation-iteration-count:infinite;animation-direction:alternate"
+        >
+          fade
+        </div>
         <CardTitle>fade-in</CardTitle>
         <CardDescription>opacity 0 → 1</CardDescription>
       </Card>
       <Card class="flex-col items-center gap-3 text-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-mauve text-lg font-bold text-black animate-slide-up" style="animation-iteration-count:infinite;animation-direction:alternate">up</div>
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-xl bg-mauve text-lg font-bold text-black animate-slide-up"
+          style="animation-iteration-count:infinite;animation-direction:alternate"
+        >
+          up
+        </div>
         <CardTitle>slide-up</CardTitle>
         <CardDescription>translateY + opacity</CardDescription>
       </Card>
       <Card class="flex-col items-center gap-3 text-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-blue text-lg font-bold text-black animate-scale-in" style="animation-iteration-count:infinite;animation-direction:alternate">+</div>
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-xl bg-blue text-lg font-bold text-black animate-scale-in"
+          style="animation-iteration-count:infinite;animation-direction:alternate"
+        >
+          +
+        </div>
         <CardTitle>scale-in</CardTitle>
         <CardDescription>scale 0.95 + opacity</CardDescription>
       </Card>
       <Card class="flex-col items-center gap-3 text-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-peach text-lg font-bold text-black animate-fade-out" style="animation-iteration-count:infinite;animation-direction:alternate-reverse">out</div>
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-xl bg-peach text-lg font-bold text-black animate-fade-out"
+          style="animation-iteration-count:infinite;animation-direction:alternate-reverse"
+        >
+          out
+        </div>
         <CardTitle>fade-out</CardTitle>
         <CardDescription>opacity 1 → 0</CardDescription>
       </Card>
@@ -391,11 +589,20 @@ import Input from "../components/ui/Input.vue";
   <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Depth -->
-  <section id="depth" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
+  <section
+    id="depth"
+    class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20"
+  >
     <div class="reveal flex flex-col gap-2">
-      <span class="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-muted">09 / Elevation</span>
+      <span
+        class="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-muted"
+        >09 / Elevation</span
+      >
       <h2 class="font-title text-3xl font-bold text-white">Depth</h2>
-      <p class="max-w-lg text-sm text-muted">Four levels of elevation. Shadows turn up the drama against dark backgrounds.</p>
+      <p class="max-w-lg text-sm text-muted">
+        Four levels of elevation. Shadows turn up the drama against dark
+        backgrounds.
+      </p>
     </div>
     <div class="reveal reveal-delay-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       <div class="rounded-lg bg-zinc-950 p-6">
@@ -408,82 +615,155 @@ import Input from "../components/ui/Input.vue";
       </div>
       <Card variant="surface" padding="default" hover>
         <CardTitle>Elevated</CardTitle>
-        <CardDescription class="mt-1">Lifted — <span class="font-mono text-near-white">shadow-medium</span></CardDescription>
+        <CardDescription class="mt-1"
+          >Lifted — <span class="font-mono text-near-white">shadow-medium</span
+          ></CardDescription
+        >
       </Card>
       <Card variant="elevated" padding="default" hover>
         <CardTitle>Dialog</CardTitle>
-        <CardDescription class="mt-1">Floating — <span class="font-mono text-near-white">shadow-heavy</span></CardDescription>
+        <CardDescription class="mt-1"
+          >Floating — <span class="font-mono text-near-white">shadow-heavy</span
+          ></CardDescription
+        >
       </Card>
     </div>
   </section>
 </Layout>
 
 <style>
-    .reveal {
-      opacity: 0;
-      translate: 0 24px;
-      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), translate 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  .reveal {
+    opacity: 0;
+    translate: 0 24px;
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      translate 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .reveal-delay-1 {
+    transition-delay: 0.05s;
+  }
+  .reveal-delay-2 {
+    transition-delay: 0.1s;
+  }
+  .reveal-delay-3 {
+    transition-delay: 0.15s;
+  }
+  .reveal-delay-4 {
+    transition-delay: 0.2s;
+  }
+  .reveal-delay-5 {
+    transition-delay: 0.25s;
+  }
+
+  @keyframes hero-glow {
+    0%,
+    100% {
+      opacity: 0.08;
+      scale: 1;
     }
-    .reveal.visible {
-      opacity: 1;
+    50% {
+      opacity: 0.18;
+      scale: 1.05;
+    }
+  }
+  @keyframes hero-float {
+    0%,
+    100% {
       translate: 0 0;
     }
-    .reveal-delay-1 { transition-delay: 0.05s; }
-    .reveal-delay-2 { transition-delay: 0.1s; }
-    .reveal-delay-3 { transition-delay: 0.15s; }
-    .reveal-delay-4 { transition-delay: 0.2s; }
-    .reveal-delay-5 { transition-delay: 0.25s; }
-
-    @keyframes hero-glow {
-      0%, 100% { opacity: 0.08; scale: 1; }
-      50% { opacity: 0.18; scale: 1.05; }
+    50% {
+      translate: 0 -8px;
     }
-    @keyframes hero-float {
-      0%, 100% { translate: 0 0; }
-      50% { translate: 0 -8px; }
+  }
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px
+        color-mix(in srgb, var(--catppuccin-color-green) 30%, transparent);
     }
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 20px color-mix(in srgb, var(--catppuccin-color-green) 30%, transparent); }
-      50% { box-shadow: 0 0 40px color-mix(in srgb, var(--catppuccin-color-green) 50%, transparent); }
+    50% {
+      box-shadow: 0 0 40px
+        color-mix(in srgb, var(--catppuccin-color-green) 50%, transparent);
     }
-    @keyframes shimmer {
-      0% { background-position: 200% center; }
-      100% { background-position: -200% center; }
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: 200% center;
     }
-    @keyframes grain {
-      0%, 100% { translate: 0 0; }
-      10% { translate: -2px -2px; }
-      20% { translate: 1px -3px; }
-      30% { translate: -1px 2px; }
-      40% { translate: 3px 1px; }
-      50% { translate: -2px 0; }
-      60% { translate: 1px 2px; }
-      70% { translate: -3px 1px; }
-      80% { translate: 2px -1px; }
-      90% { translate: -1px -2px; }
+    100% {
+      background-position: -200% center;
     }
-    .color-swatch-block {
-      transition: scale 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  }
+  @keyframes grain {
+    0%,
+    100% {
+      translate: 0 0;
+    }
+    10% {
+      translate: -2px -2px;
+    }
+    20% {
+      translate: 1px -3px;
+    }
+    30% {
+      translate: -1px 2px;
+    }
+    40% {
+      translate: 3px 1px;
+    }
+    50% {
+      translate: -2px 0;
+    }
+    60% {
+      translate: 1px 2px;
+    }
+    70% {
+      translate: -3px 1px;
+    }
+    80% {
+      translate: 2px -1px;
+    }
+    90% {
+      translate: -1px -2px;
+    }
+  }
+  .color-swatch-block {
+    transition:
+      scale 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.4s ease;
+  }
+  .color-swatch-block:hover {
+    scale: 1.08;
+    filter: brightness(1.15);
+  }
+  .type-sample {
+    transition:
+      translate 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      background 0.3s ease;
+  }
+  .type-sample:hover {
+    translate: 4px 0;
+    background: var(--catppuccin-color-base);
+  }
+  .section-divider {
+    transition: opacity 0.6s ease;
+    height: 1px;
+    background: var(--catppuccin-color-overlay2);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      translate: 0;
     }
     .color-swatch-block:hover {
-      scale: 1.08;
-      filter: brightness(1.15);
-    }
-    .type-sample {
-      transition: translate 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+      scale: 1;
     }
     .type-sample:hover {
-      translate: 4px 0;
-      background: var(--catppuccin-color-base);
+      translate: 0;
     }
-    .section-divider {
-      transition: opacity 0.6s ease;
-      height: 1px;
-      background: var(--catppuccin-color-overlay2);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; translate: 0; }
-      .color-swatch-block:hover { scale: 1; }
-      .type-sample:hover { translate: 0; }
-    }
-  </style>
+  }
+</style>

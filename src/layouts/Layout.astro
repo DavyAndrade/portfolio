@@ -1,5 +1,11 @@
 ---
 import "../styles/global.css";
+
+export interface LayoutProps {
+  title?: string;
+}
+
+const { title = "Davy Andrade" } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,7 +16,7 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Davy Andrade</title>
+    <title>{title}</title>
   </head>
   <body class="scroll-smooth bg-zinc-950" data-viewer="site">
     <slot />
