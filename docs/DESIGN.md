@@ -1,246 +1,201 @@
-# Design System Inspired by Spotify
+# Design System Inspired by Catppuccin Mocha
 
 ## 1. Visual Theme & Atmosphere
 
-Spotify's web interface is a dark, immersive music player that wraps listeners in a near-black cocoon (`#121212`, `#181818`, `#1f1f1f`) where album art and content become the primary source of color. The design philosophy is "content-first darkness" — the UI recedes into shadow so that music, podcasts, and playlists can glow. Every surface is a shade of charcoal, creating a theater-like environment where the only true color comes from the iconic Spotify Green (`#1ed760`) and the album artwork itself.
+Catppuccin Mocha is a warm, pastel-hued dark theme that wraps interfaces in deep indigo-grays (`#1e1e2e`, `#181825`, `#11111b`) accented with soft, desaturated pastels. Unlike high-contrast dark themes, Catppuccin prioritizes visual comfort — the palette is designed to reduce eye strain while maintaining clear hierarchy through subtle tonal variation. The design philosophy is "soothing darkness": surfaces recede into warm shadows while pastel accents provide gentle, readable highlights.
 
-The typography uses SpotifyMixUI and SpotifyMixUITitle — proprietary fonts from the CircularSp family (Circular by Lineto, customized for Spotify) with an extensive fallback stack that includes Arabic, Hebrew, Cyrillic, Greek, Devanagari, and CJK fonts, reflecting Spotify's global reach. The type system is compact and functional: 700 (bold) for emphasis and navigation, 600 (semibold) for secondary emphasis, and 400 (regular) for body. Buttons use uppercase with positive letter-spacing (1.4px–2px) for a systematic, label-like quality.
-
-What distinguishes Spotify is its pill-and-circle geometry. Primary buttons use 500px–9999px radius (full pill), circular play buttons use 50% radius, and search inputs are 500px pills. Combined with heavy shadows (`rgba(0,0,0,0.5) 0px 8px 24px`) on elevated elements and a unique inset border-shadow combo (`rgb(18,18,18) 0px 1px 0px, rgb(124,124,124) 0px 0px 0px 1px inset`), the result is an interface that feels like a premium audio device — tactile, rounded, and built for touch.
+The palette is built on a careful balance: cool base tones (`#1e1e2e` base, `#313244` surface0) provide depth, while warm accent colors (rosewater `#f5e0dc`, peach `#fab387`, yellow `#f9e2af`) bring life to interactive elements without the harshness of fully saturated primaries. The blue `#89b4fa`, mauve `#cba6f7`, and lavender `#b4befe` form a cohesive cool accent family. Green `#a6e3a1` and teal `#94e2d5` complete the palette with natural, organic tones.
 
 **Key Characteristics:**
-- Near-black immersive dark theme (`#121212`–`#1f1f1f`) — UI disappears behind content
-- Spotify Green (`#1ed760`) as singular brand accent — never decorative, always functional
-- SpotifyMixUI/CircularSp font family with global script support
-- Pill buttons (500px–9999px) and circular controls (50%) — rounded, touch-optimized
-- Uppercase button labels with wide letter-spacing (1.4px–2px)
-- Heavy shadows on elevated elements (`rgba(0,0,0,0.5) 0px 8px 24px`)
-- Semantic colors: negative red (`#f3727f`), warning orange (`#ffa42b`), announcement blue (`#539df5`)
-- Album art as the primary color source — the UI is achromatic by design
+- Deep indigo-black dark theme (`#1e1e2e`–`#11111b`) — warm, not cold
+- Desaturated pastel accents — soothing, never harsh
+- 26-color palette with cohesive tonal relationships
+- Green accent (`#a6e3a1`) for CTAs and active states
+- Tonal surfaces: `mantle` (`#181825`), `base` (`#1e1e2e`), `surface0-2` (`#313244`–`#585b70`)
+- Layered text opacity: `text` → `subtext1` → `subtext0` → `overlay2` → `overlay0`
+- Pill-and-circle geometry for interactive elements
+- Heavy shadows for elevation against dark backgrounds
 
 ## 2. Color Palette & Roles
 
-### Primary Brand
-- **Spotify Green** (`#1ed760`): Primary brand accent — play buttons, active states, CTAs
-- **Near Black** (`#121212`): Deepest background surface
-- **Dark Surface** (`#181818`): Cards, containers, elevated surfaces
-- **Mid Dark** (`#1f1f1f`): Button backgrounds, interactive surfaces
+### Base & Surface
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--color-ctp-crust` | `#11111b` | Deepest background, page root |
+| `--color-ctp-mantle` | `#181825` | Cards, containers, elevated surfaces |
+| `--color-ctp-base` | `#1e1e2e` | Primary surface — buttons, inputs, mid-level containers |
+| `--color-ctp-surface0` | `#313244` | Elevated cards, hover states |
+| `--color-ctp-surface1` | `#45475a` | Borders, dividers, subtle separation |
+| `--color-ctp-surface2` | `#585b70` | Strong borders, disabled states |
 
-### Text
-- **White** (`#ffffff`): `--text-base`, primary text
-- **Silver** (`#b3b3b3`): Secondary text, muted labels, inactive nav
-- **Near White** (`#cbcbcb`): Slightly brighter secondary text
-- **Light** (`#fdfdfd`): Near-pure white for maximum emphasis
+### Overlay & Text
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--color-ctp-overlay0` | `#6c7086` | Muted borders, subdued elements |
+| `--color-ctp-overlay1` | `#7f849c` | Secondary dividers, placeholder text |
+| `--color-ctp-overlay2` | `#9399b2` | Tertiary text, disabled labels |
+| `--color-ctp-subtext0` | `#a6adc8` | Secondary text, muted labels |
+| `--color-ctp-subtext1` | `#bac2de` | Near-primary text, metadata |
+| `--color-ctp-text` | `#cdd6f4` | Primary text, headings |
 
-### Semantic
-- **Negative Red** (`#f3727f`): `--text-negative`, error states
-- **Warning Orange** (`#ffa42b`): `--text-warning`, warning states
-- **Announcement Blue** (`#539df5`): `--text-announcement`, info states
+### Accent Colors
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--color-ctp-green` | `#a6e3a1` | Brand accent, CTAs, active states |
+| `--color-ctp-blue` | `#89b4fa` | Info states, links, announcements |
+| `--color-ctp-mauve` | `#cba6f7` | Highlights, decorative accents |
+| `--color-ctp-peach` | `#fab387` | Warning states, attention |
+| `--color-ctp-red` | `#f38ba8` | Error states, destructive actions |
+| `--color-ctp-yellow` | `#f9e2af` | Caution, pending states |
+| `--color-ctp-teal` | `#94e2d5` | Success states, confirmations |
+| `--color-ctp-pink` | `#f5c2e7` | Special accents, promotion |
+| `--color-ctp-lavender` | `#b4befe` | Secondary highlights |
+| `--color-ctp-sapphire` | `#74c7ec` | Informational accents |
+| `--color-ctp-sky` | `#89dceb` | Light info, tags |
+| `--color-ctp-rosewater` | `#f5e0dc` | Soft highlights, subtle emphasis |
+| `--color-ctp-flamingo` | `#f2cdcd` | Muted alerts |
+| `--color-ctp-maroon` | `#eba0ac` | Secondary error states |
 
-### Surface & Border
-- **Dark Card** (`#252525`): Elevated card surface
-- **Mid Card** (`#272727`): Alternate card surface
-- **Border Gray** (`#4d4d4d`): Button borders on dark
-- **Light Border** (`#7c7c7c`): Outlined button borders, muted links
-- **Separator** (`#b3b3b3`): Divider lines
-- **Light Surface** (`#eeeeee`): Light-mode buttons (rare)
-- **Spotify Green Border** (`#1db954`): Green accent border variant
+### Mapped Tokens (backwards compatible)
+| Token | Maps To | Usage |
+|-------|---------|-------|
+| `--color-green` | `--catppuccin-color-green` | Brand accent |
+| `--color-surface` | `--catppuccin-color-mantle` | Card/container background |
+| `--color-surface-mid` | `--catppuccin-color-base` | Button/input background |
+| `--color-muted` | `--catppuccin-color-subtext0` | Secondary text |
+| `--color-negative` | `--catppuccin-color-red` | Error states |
+| `--color-warning` | `--catppuccin-color-peach` | Warning states |
+| `--color-info` | `--catppuccin-color-blue` | Info states |
 
 ### Shadows
-- **Heavy** (`rgba(0,0,0,0.5) 0px 8px 24px`): Dialogs, menus, elevated panels
-- **Medium** (`rgba(0,0,0,0.3) 0px 8px 8px`): Cards, dropdowns
-- **Inset Border** (`rgb(18,18,18) 0px 1px 0px, rgb(124,124,124) 0px 0px 0px 1px inset`): Input border-shadow combo
+| Level | Value | Usage |
+|-------|-------|-------|
+| Medium | `rgba(0,0,0,0.3) 0px 8px 8px` | Cards, dropdowns |
+| Heavy | `rgba(0,0,0,0.5) 0px 8px 24px` | Dialogs, overlays |
+| Inset | `rgb(18,18,18) 0px 1px 0px, rgb(124,124,124) 0px 0px 0px 1px inset` | Input borders |
 
-## 3. Typography Rules
+### Typography
+| Role | Font | Size | Weight |
+|------|------|------|--------|
+| Section Title | SpotifyMixUITitle | 24px (1.50rem) | 700 |
+| Feature Heading | SpotifyMixUI | 18px (1.13rem) | 600 |
+| Body | SpotifyMixUI | 14–16px | 400 |
+| Caption | SpotifyMixUI | 12–14px | 400 |
+| Badge | SpotifyMixUI | 10.5px (0.66rem) | 600 |
 
-### Font Families
-- **Title**: `SpotifyMixUITitle`, fallbacks: `CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, Helvetica Neue, helvetica, arial, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic`
-- **UI / Body**: `SpotifyMixUI`, same fallback stack
+### Border Radius
+| Name | Value | Usage |
+|------|-------|-------|
+| Pill | 500px | Primary buttons, search input |
+| Circle | 50% | Play buttons, avatars |
+| Standard | 6px–8px | Cards, containers |
+| Subtle | 4px | Inputs, small elements |
 
-### Hierarchy
+### Animations
+| Token | Keyframes | Usage |
+|-------|-----------|-------|
+| `animate-fade-in` | `opacity: 0 → 1` | Page entry, reveal |
+| `animate-fade-out` | `opacity: 1 → 0` | Dismiss, unmount |
+| `animate-slide-up` | `translateY(1rem) + opacity` | Card/stagger entry |
+| `animate-scale-in` | `scale(0.95) + opacity` | Modal, dialog appear |
 
-| Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
-|------|------|------|--------|-------------|----------------|-------|
-| Section Title | SpotifyMixUITitle | 24px (1.50rem) | 700 | normal | normal | Bold title weight |
-| Feature Heading | SpotifyMixUI | 18px (1.13rem) | 600 | 1.30 (tight) | normal | Semibold section heads |
-| Body Bold | SpotifyMixUI | 16px (1.00rem) | 700 | normal | normal | Emphasized text |
-| Body | SpotifyMixUI | 16px (1.00rem) | 400 | normal | normal | Standard body |
-| Button Uppercase | SpotifyMixUI | 14px (0.88rem) | 600–700 | 1.00 (tight) | 1.4px–2px | `text-transform: uppercase` |
-| Button | SpotifyMixUI | 14px (0.88rem) | 700 | normal | 0.14px | Standard button |
-| Nav Link Bold | SpotifyMixUI | 14px (0.88rem) | 700 | normal | normal | Navigation |
-| Nav Link | SpotifyMixUI | 14px (0.88rem) | 400 | normal | normal | Inactive nav |
-| Caption Bold | SpotifyMixUI | 14px (0.88rem) | 700 | 1.50–1.54 | normal | Bold metadata |
-| Caption | SpotifyMixUI | 14px (0.88rem) | 400 | normal | normal | Metadata |
-| Small Bold | SpotifyMixUI | 12px (0.75rem) | 700 | 1.50 | normal | Tags, counts |
-| Small | SpotifyMixUI | 12px (0.75rem) | 400 | normal | normal | Fine print |
-| Badge | SpotifyMixUI | 10.5px (0.66rem) | 600 | 1.33 | normal | `text-transform: capitalize` |
-| Micro | SpotifyMixUI | 10px (0.63rem) | 400 | normal | normal | Smallest text |
+Usage: `class="animate-fade-in"` (Tailwind v4 generates the `@keyframes` automatically).
 
-### Principles
-- **Bold/regular binary**: Most text is either 700 (bold) or 400 (regular), with 600 used sparingly. This creates a clear visual hierarchy through weight contrast rather than size variation.
-- **Uppercase buttons as system**: Button labels use uppercase + wide letter-spacing (1.4px–2px), creating a systematic "label" voice distinct from content text.
-- **Compact sizing**: The range is 10px–24px — narrower than most systems. Spotify's type is compact and functional, designed for scanning playlists, not reading articles.
-- **Global script support**: The extensive fallback stack (Arabic, Hebrew, Cyrillic, Greek, Devanagari, CJK) reflects Spotify's 180+ market reach.
+## 3. Token Hierarchy
 
-## 4. Component Stylings
+```
+Brand Tokens (Catppuccin Mocha palette)
+  └── Semantic Tokens (purpose-mapped)
+      └── Component Tokens (variant-specific)
+```
 
-### Buttons
+**Brand**: `--catppuccin-color-green`, `--catppuccin-color-mauve`, etc. — the raw palette.
 
-**Dark Pill**
-- Background: `#1f1f1f`
-- Text: `#ffffff` or `#b3b3b3`
-- Padding: 8px 16px
-- Radius: 9999px (full pill)
-- Use: Navigation pills, secondary actions
+**Semantic** (in `tailwind.css` `@theme`): `--color-surface`, `--color-muted`, `--color-negative` — mapped from brand by purpose.
 
-**Dark Large Pill**
-- Background: `#181818`
-- Text: `#ffffff`
-- Padding: 0px 43px
-- Radius: 500px
-- Use: Primary app navigation buttons
+**Component**: Applied directly in Vue/Astro via utility classes: `bg-surface`, `text-muted`, `border-border-gray`.
 
-**Light Pill**
-- Background: `#eeeeee`
-- Text: `#181818`
-- Radius: 500px
-- Use: Light-mode CTAs (cookie consent, marketing)
+### Component Architecture Pattern
 
-**Outlined Pill**
-- Background: transparent
-- Text: `#ffffff`
-- Border: `1px solid #7c7c7c`
-- Padding: 4px 16px 4px 36px (asymmetric for icon)
-- Radius: 9999px
-- Use: Follow buttons, secondary actions
+```
+Base styles → Variants → Sizes → States → Overrides
+```
 
-**Circular Play**
-- Background: `#1f1f1f`
-- Text: `#ffffff`
-- Padding: 12px
-- Radius: 50% (circle)
-- Use: Play/pause controls
+**Example — Button:**
+```
+Base:   rounded-full font-bold uppercase tracking-[0.15em] text-xs
+Var:    bg-green text-black / bg-surface-mid text-white / border border-border-light
+Size:   px-5 py-1.5 / px-8 py-3
+State:  hover:bg-green-border / hover:brightness-110 / hover:border-white
+```
 
-### Cards & Containers
-- Background: `#181818` or `#1f1f1f`
-- Radius: 6px–8px
-- No visible borders on most cards
-- Hover: slight background lightening
-- Shadow: `rgba(0,0,0,0.3) 0px 8px 8px` on elevated
+## 4. Spacing Scale (8pt Grid)
 
-### Inputs
-- Search input: `#1f1f1f` background, `#ffffff` text
-- Radius: 500px (pill)
-- Padding: 12px 96px 12px 48px (icon-aware)
-- Focus: border becomes `#000000`, outline `1px solid`
+| Token | Rem | px |
+|-------|-----|----|
+| `p-1` | 0.25rem | 4px |
+| `p-2` | 0.5rem | 8px |
+| `p-3` | 0.75rem | 12px |
+| `p-4` | 1rem | 16px |
+| `p-5` | 1.25rem | 20px |
+| `p-6` | 1.5rem | 24px |
+| `p-8` | 2rem | 32px |
+| `p-10` | 2.5rem | 40px |
+| `p-12` | 3rem | 48px |
+| `p-16` | 4rem | 64px |
+| `p-20` | 5rem | 80px |
 
-### Navigation
-- Dark sidebar with SpotifyMixUI 14px weight 700 for active, 400 for inactive
-- `#b3b3b3` muted color for inactive items, `#ffffff` for active
-- Circular icon buttons (50% radius)
-- Spotify logo top-left in green
-
-## 5. Layout Principles
-
-### Spacing System
-- Base unit: 8px
-- Scale: 1px, 2px, 3px, 4px, 5px, 6px, 8px, 10px, 12px, 14px, 15px, 16px, 20px
-
-### Grid & Container
-- Sidebar (fixed) + main content area
-- Grid-based album/playlist cards
-- Full-width now-playing bar at bottom
-- Responsive content area fills remaining space
-
-### Whitespace Philosophy
-- **Dark compression**: Spotify packs content densely — playlist grids, track lists, and navigation are all tightly spaced. The dark background provides visual rest between elements without needing large gaps.
-- **Content density over breathing room**: This is an app, not a marketing site. Every pixel serves the listening experience.
-
-### Border Radius Scale
-- Minimal (2px): Badges, explicit tags
-- Subtle (4px): Inputs, small elements
-- Standard (6px): Album art containers, cards
-- Comfortable (8px): Sections, dialogs
-- Medium (10px–20px): Panels, overlay elements
-- Large (100px): Large pill buttons
-- Pill (500px): Primary buttons, search input
-- Full Pill (9999px): Navigation pills, search
-- Circle (50%): Play buttons, avatars, icons
-
-## 6. Depth & Elevation
-
-| Level | Treatment | Use |
-|-------|-----------|-----|
-| Base (Level 0) | `#121212` background | Deepest layer, page background |
-| Surface (Level 1) | `#181818` or `#1f1f1f` | Cards, sidebar, containers |
-| Elevated (Level 2) | `rgba(0,0,0,0.3) 0px 8px 8px` | Dropdown menus, hover cards |
-| Dialog (Level 3) | `rgba(0,0,0,0.5) 0px 8px 24px` | Modals, overlays, menus |
-| Inset (Border) | `rgb(18,18,18) 0px 1px 0px, rgb(124,124,124) 0px 0px 0px 1px inset` | Input borders |
-
-**Shadow Philosophy**: Spotify uses notably heavy shadows for a dark-themed app. The 0.5 opacity shadow at 24px blur creates a dramatic "floating in darkness" effect for dialogs and menus, while the 0.3 opacity at 8px blur provides a more subtle card lift. The unique inset border-shadow combination on inputs creates a recessed, tactile quality.
-
-## 7. Do's and Don'ts
+## 5. Do's and Don'ts
 
 ### Do
-- Use near-black backgrounds (`#121212`–`#1f1f1f`) — depth through shade variation
-- Apply Spotify Green (`#1ed760`) only for play controls, active states, and primary CTAs
-- Use pill shape (500px–9999px) for all buttons — circular (50%) for play controls
-- Apply uppercase + wide letter-spacing (1.4px–2px) on button labels
-- Keep typography compact (10px–24px range) — this is an app, not a magazine
-- Use heavy shadows (`0.3–0.5 opacity`) for elevated elements on dark backgrounds
-- Let album art provide color — the UI itself is achromatic
+- Use `crust`/`mantle`/`base` as surface hierarchy — depth through tonal variation
+- Apply green (`#a6e3a1`) for primary CTAs and active states
+- Use pastel accents (mauve, blue, peach) for semantic roles — they carry meaning without harshness
+- Leverage the full palette — Catppuccin's 26 colors are designed to coexist
+- Use pill geometry (500px) for buttons and inputs
+- Use heavy shadows (`0.3–0.5 opacity`) for elevation
+- Keep text hierarchy clear: `text` → `subtext1` → `subtext0` → `overlay2`
 
 ### Don't
-- Don't use Spotify Green decoratively or on backgrounds — it's functional only
-- Don't use light backgrounds for primary surfaces — the dark immersion is core
-- Don't skip the pill/circle geometry on buttons — square buttons break the identity
-- Don't use thin/subtle shadows — on dark backgrounds, shadows need to be heavy to be visible
-- Don't add additional brand colors — green + achromatic grays is the complete palette
-- Don't use relaxed line-heights — Spotify's typography is compact and dense
-- Don't expose raw gray borders — use shadow-based or inset borders instead
+- Don't use fully saturated primaries — Catppuccin's desaturated quality is core
+- Don't mix with cold blue-black backgrounds — stick to Catppuccin's warm indigo base
+- Don't use light backgrounds as primary surfaces
+- Don't skip the tonal surface layering — the subtle `mantle` → `base` → `surface0` progression is key
+- Don't use thin shadows on dark backgrounds — they become invisible
 
-## 8. Responsive Behavior
+## 6. Responsive Behavior
 
 ### Breakpoints
-| Name | Width | Key Changes |
-|------|-------|-------------|
-| Mobile Small | <425px | Compact mobile layout |
-| Mobile | 425–576px | Standard mobile |
-| Tablet | 576–768px | 2-column grid |
-| Tablet Large | 768–896px | Expanded layout |
-| Desktop Small | 896–1024px | Sidebar visible |
-| Desktop | 1024–1280px | Full desktop layout |
-| Large Desktop | >1280px | Expanded grid |
+| Name | Width |
+|------|-------|
+| Mobile Small | <425px |
+| Mobile | 425–576px |
+| Tablet | 576–768px |
+| Desktop Small | 896–1024px |
+| Desktop | 1024–1280px |
+| Large Desktop | >1280px |
 
-### Collapsing Strategy
-- Sidebar: full → collapsed → hidden
-- Album grid: 5 columns → 3 → 2 → 1
-- Now-playing bar: maintained at all sizes
-- Search: pill input maintained, width adjusts
-- Navigation: sidebar → bottom bar on mobile
+### Strategy
+- Grid columns: 5 → 3 → 2 → 1
+- Pill inputs maintain shape, width adjusts
+- Navigation collapses sidebar → bottom bar on mobile
 
-## 9. Agent Prompt Guide
+## 7. Agent Prompt Guide
 
 ### Quick Color Reference
-- Background: Near Black (`#121212`)
-- Surface: Dark Card (`#181818`)
-- Text: White (`#ffffff`)
-- Secondary text: Silver (`#b3b3b3`)
-- Accent: Spotify Green (`#1ed760`)
-- Border: `#4d4d4d`
-- Error: Negative Red (`#f3727f`)
+- Background: Crust (`#11111b`) / Mantle (`#181825`)
+- Surface: Base (`#1e1e2e`) / Surface0 (`#313244`)
+- Primary text: Text (`#cdd6f4`)
+- Secondary text: Subtext0 (`#a6adc8`)
+- Accent: Green (`#a6e3a1`)
+- Borders: Surface1 (`#45475a`), Overlay0 (`#6c7086`)
+- Error: Red (`#f38ba8`)
+- Warning: Peach (`#fab387`)
+- Info: Blue (`#89b4fa`)
 
 ### Example Component Prompts
-- "Create a dark card: #181818 background, 8px radius. Title at 16px SpotifyMixUI weight 700, white text. Subtitle at 14px weight 400, #b3b3b3. Shadow rgba(0,0,0,0.3) 0px 8px 8px on hover."
-- "Design a pill button: #1f1f1f background, white text, 9999px radius, 8px 16px padding. 14px SpotifyMixUI weight 700, uppercase, letter-spacing 1.4px."
-- "Build a circular play button: Spotify Green (#1ed760) background, #000000 icon, 50% radius, 12px padding."
-- "Create search input: #1f1f1f background, white text, 500px radius, 12px 48px padding. Inset border: rgb(124,124,124) 0px 0px 0px 1px inset."
-- "Design navigation sidebar: #121212 background. Active items: 14px weight 700, white. Inactive: 14px weight 400, #b3b3b3."
-
-### Iteration Guide
-1. Start with #121212 — everything lives in near-black darkness
-2. Spotify Green for functional highlights only (play, active, CTA)
-3. Pill everything — 500px for large, 9999px for small, 50% for circular
-4. Uppercase + wide tracking on buttons — the systematic label voice
-5. Heavy shadows (0.3–0.5 opacity) for elevation — light shadows are invisible on dark
-6. Album art provides all the color — the UI stays achromatic
+- "Create a card: mantle background (#181825), 8px radius. Title at 16px weight 700, text color (#cdd6f4). Subtitle at 14px weight 400, subtext0 (#a6adc8). Shadow medium on hover."
+- "Design a pill button: base background (#1e1e2e), text (#cdd6f4), 500px radius, 8px 16px padding. 14px weight 700, uppercase."
+- "Build a circular button: green (#a6e3a1) background, crust (#11111b) icon, 50% radius."
+- "Create search input: base (#1e1e2e) background, text (#cdd6f4), 500px radius. Inset border with overlay0 (#6c7086)."
+- "Design navigation: crust (#11111b) sidebar. Active items white text weight 700. Inactive subtext0 weight 400."

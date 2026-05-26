@@ -1,29 +1,92 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "@catppuccin/tailwindcss/mocha.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
+  /* ── Brand Colors (Catppuccin Mocha) ── */
   --color-green: var(--catppuccin-color-green);
   --color-green-border: var(--catppuccin-color-green);
+
+  /* ── Surface & Background ── */
   --color-surface: var(--catppuccin-color-mantle);
   --color-surface-mid: var(--catppuccin-color-base);
+  --color-surface-light: var(--catppuccin-color-base);
   --color-card-dark: var(--catppuccin-color-surface0);
+
+  /* ── Border & Separator ── */
   --color-border-gray: var(--catppuccin-color-surface1);
   --color-border-light: var(--catppuccin-color-overlay0);
   --color-separator: var(--catppuccin-color-overlay2);
+
+  /* ── Typography ── */
   --color-muted: var(--catppuccin-color-subtext0);
   --color-near-white: var(--catppuccin-color-subtext1);
+
+  /* ── Semantic ── */
   --color-negative: var(--catppuccin-color-red);
   --color-warning: var(--catppuccin-color-peach);
   --color-info: var(--catppuccin-color-blue);
-  --color-surface-light: var(--catppuccin-color-base);
-  --font-title: var(--spotify-font-title);
-  --font-ui: var(--spotify-font-ui);
-  --radius-pill: var(--spotify-radius-pill);
-  --radius-circle: var(--spotify-radius-circle);
-  --shadow-medium: var(--spotify-shadow-medium);
-  --shadow-heavy: var(--spotify-shadow-heavy);
-  --shadow-inset: var(--spotify-shadow-inset);
+
+  /* ── Accent Colors ── */
+  --color-mauve: var(--catppuccin-color-mauve);
+  --color-peach: var(--catppuccin-color-peach);
+  --color-blue: var(--catppuccin-color-blue);
+  --color-teal: var(--catppuccin-color-teal);
+  --color-yellow: var(--catppuccin-color-yellow);
+  --color-pink: var(--catppuccin-color-pink);
+  --color-lavender: var(--catppuccin-color-lavender);
+  --color-sky: var(--catppuccin-color-sky);
+  --color-sapphire: var(--catppuccin-color-sapphire);
+  --color-rosewater: var(--catppuccin-color-rosewater);
+  --color-flamingo: var(--catppuccin-color-flamingo);
+  --color-maroon: var(--catppuccin-color-maroon);
+
+  /* ── Fonts ── */
+  --font-title: "SpotifyMixUITitle", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+  --font-ui: "SpotifyMixUI", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+
+  /* ── Border Radius ── */
+  --radius-pill: 500px;
+  --radius-circle: 50%;
+
+  /* ── Shadows ── */
+  --shadow-medium: rgba(0, 0, 0, 0.3) 0px 8px 8px;
+  --shadow-heavy: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+  --shadow-inset: rgb(18, 18, 18) 0px 1px 0px, rgb(124, 124, 124) 0px 0px 0px 1px inset;
+
+  /* ── Animations ── */
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-fade-out: fade-out 0.2s ease-in;
+  --animate-slide-up: slide-up 0.3s ease-out;
+  --animate-scale-in: scale-in 0.2s ease-out;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes slide-up {
+    from { translate: 0 1rem; opacity: 0; }
+    to { translate: 0 0; opacity: 1; }
+  }
+  @keyframes scale-in {
+    from { scale: 0.95; opacity: 0; }
+    to { scale: 1; opacity: 1; }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--catppuccin-color-surface1);
+  }
+  body {
+    background-color: var(--catppuccin-color-crust);
+    color: var(--catppuccin-color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }

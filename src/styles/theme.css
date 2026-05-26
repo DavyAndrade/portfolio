@@ -179,6 +179,13 @@
   --catppuccin-color-base: #1e1e2e;
   --catppuccin-color-mantle: #181825;
   --catppuccin-color-crust: #11111b;
+  --shadow-medium: rgba(0, 0, 0, 0.3) 0px 8px 8px;
+  --shadow-heavy: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+  --shadow-inset: rgb(18, 18, 18) 0px 1px 0px, rgb(124, 124, 124) 0px 0px 0px 1px inset;
+  --font-title: "SpotifyMixUITitle", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+  --font-ui: "SpotifyMixUI", "CircularSp-Arab", "CircularSp-Hebr", "CircularSp-Cyrl", "CircularSp-Grek", "CircularSp-Deva", "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+  --radius-pill: 500px;
+  --radius-circle: 50%;
 }
 
 .dark {
