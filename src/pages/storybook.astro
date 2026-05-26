@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardAction } from "../components/ui/card";
 import Typography from "../components/ui/Typography.vue";
+import Button from "../components/ui/Button.vue";
+import Input from "../components/ui/Input.vue";
 ---
 
 <Layout title="Design System">
@@ -34,10 +36,7 @@ import Typography from "../components/ui/Typography.vue";
       <li><a class="transition hover:text-white" href="#radius">Radius</a></li>
       <li><a class="transition hover:text-white" href="#depth">Depth</a></li>
     </ul>
-    <a
-      class="btn-hover inline-flex items-center justify-center rounded-full bg-green px-5 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.15em] text-black shadow-medium hover:bg-green-border"
-      href="#"
-    >Explore</a>
+    <Button variant="green-pill" size="sm" as="a" href="#">Explore</Button>
   </nav>
 
   <!-- Hero -->
@@ -54,18 +53,12 @@ import Typography from "../components/ui/Typography.vue";
       </p>
     </div>
     <div class="reveal reveal-delay-1 flex items-center gap-3">
-      <a
-        class="btn-hover inline-flex items-center justify-center rounded-full bg-green px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] text-black shadow-medium hover:bg-green-border"
-        href="#"
-      >Get Started</a>
-      <a
-        class="btn-hover inline-flex items-center justify-center rounded-full border border-border-light px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] text-white hover:border-white"
-        href="#"
-      >Learn More</a>
+      <Button variant="green-pill" as="a" href="#">Get Started</Button>
+      <Button variant="outlined" as="a" href="#">Learn More</Button>
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Colors -->
   <section id="colors" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -158,7 +151,7 @@ import Typography from "../components/ui/Typography.vue";
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Typography -->
   <section id="typography" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -213,7 +206,7 @@ import Typography from "../components/ui/Typography.vue";
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Buttons -->
   <section id="buttons" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -224,25 +217,25 @@ import Typography from "../components/ui/Typography.vue";
     </div>
     <div class="reveal reveal-delay-1 flex flex-wrap items-center gap-5">
       <div class="flex flex-col items-center gap-2">
-        <a class="btn-hover inline-flex items-center justify-center rounded-full bg-green px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] text-black shadow-medium hover:bg-green-border" href="#">Shuffle Play</a>
+        <Button variant="green-pill" as="a" href="#">Shuffle Play</Button>
         <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Green Pill</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <a class="btn-hover inline-flex items-center justify-center rounded-full bg-surface-mid px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] text-white shadow-medium hover:brightness-110" href="#">Browse</a>
+        <Button variant="dark-pill" as="a" href="#">Browse</Button>
         <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Dark Pill</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <a class="btn-hover inline-flex items-center justify-center rounded-full border border-border-light px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] text-white hover:border-white" href="#">Follow</a>
+        <Button variant="outlined" as="a" href="#">Follow</Button>
         <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Outlined</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <a class="btn-hover inline-flex h-12 w-12 items-center justify-center rounded-full bg-surface-mid text-lg text-white shadow-heavy hover:brightness-110" href="#" aria-label="Play">▶</a>
+        <Button variant="play-circle" size="icon" as="a" href="#" aria-label="Play">▶</Button>
         <span class="text-[0.55rem] uppercase tracking-[0.25em] text-separator">Play Circle</span>
       </div>
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Cards -->
   <section id="cards" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -271,7 +264,7 @@ import Typography from "../components/ui/Typography.vue";
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Forms -->
   <section id="forms" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -282,35 +275,23 @@ import Typography from "../components/ui/Typography.vue";
     </div>
     <div class="reveal reveal-delay-1 flex flex-col gap-6">
       <div class="flex flex-col gap-2">
-        <label class="text-xs font-bold uppercase tracking-[0.15em] text-muted">Search</label>
-        <input
-          class="w-full rounded-full bg-surface-mid px-4 py-3 text-sm text-white shadow-inset outline-none transition-shadow duration-300 placeholder:text-separator focus:shadow-[rgb(18,18,18)_0px_1px_0px,var(--catppuccin-color-green)_0px_0px_0px_1px_inset]"
-          type="search"
-          placeholder="Artists, songs, or podcasts"
-        >
-        <span class="text-[0.6rem] text-separator">Default (inset border) → Focus (green ring)</span>
+        <Typography variant="label">Search</Typography>
+        <Input type="search" placeholder="Artists, songs, or podcasts" />
+        <Typography variant="caption">Default (inset border) → Focus (green ring)</Typography>
       </div>
       <div class="flex flex-col gap-2">
-        <label class="text-xs font-bold uppercase tracking-[0.15em] text-muted">Email</label>
-        <input
-          class="w-full rounded-full bg-surface-mid px-4 py-3 text-sm text-white outline-none transition-shadow duration-300"
-          style="box-shadow: rgb(18,18,18) 0px 1px 0px, var(--catppuccin-color-red) 0px 0px 0px 1px inset"
-          type="email"
-          value="invalid"
-        >
-        <span class="text-[0.6rem] text-separator">Error (red ring)</span>
+        <Typography variant="label">Email</Typography>
+        <Input variant="error" type="email" value="invalid" />
+        <Typography variant="caption">Error (red ring)</Typography>
       </div>
       <div class="flex flex-col gap-2">
-        <label class="text-xs font-bold uppercase tracking-[0.15em] text-muted">Description</label>
-        <textarea
-          class="w-full rounded-lg bg-surface-mid px-4 py-3 text-sm text-white shadow-inset outline-none transition-shadow duration-300 placeholder:text-separator focus:shadow-[rgb(18,18,18)_0px_1px_0px,var(--catppuccin-color-green)_0px_0px_0px_1px_inset]"
-          placeholder="Add a description..."
-        ></textarea>
+        <Typography variant="label">Description</Typography>
+        <Input variant="textarea" placeholder="Add a description..." />
       </div>
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Spacing -->
   <section id="spacing" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -343,7 +324,7 @@ import Typography from "../components/ui/Typography.vue";
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Radius -->
   <section id="radius" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -370,7 +351,7 @@ import Typography from "../components/ui/Typography.vue";
         <span class="text-xs text-muted">500px</span>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="flex h-12 w-12 items-center justify-center rounded-circle bg-green text-xs font-bold text-black transition-all duration-300 hover:scale-110">50%</div>
+        <div class="flex h-12 w-12 items-center justify-center rounded-circle bg-green text-xs font-bold transition-all duration-300 hover:scale-110"></div>
         <span class="text-xs text-muted">50%</span>
       </div>
     </div>
@@ -407,7 +388,7 @@ import Typography from "../components/ui/Typography.vue";
     </div>
   </section>
 
-  <div class="section-divider mx-auto max-w-4xl"></div>
+  <div class="section-divider mx-auto max-w-6xl"></div>
 
   <!-- Depth -->
   <section id="depth" class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20">
@@ -488,15 +469,6 @@ import Typography from "../components/ui/Typography.vue";
       scale: 1.08;
       filter: brightness(1.15);
     }
-    .btn-hover {
-      transition: scale 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease;
-    }
-    .btn-hover:hover {
-      scale: 1.04;
-    }
-    .btn-hover:active {
-      scale: 0.97;
-    }
     .type-sample {
       transition: translate 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
     }
@@ -507,12 +479,11 @@ import Typography from "../components/ui/Typography.vue";
     .section-divider {
       transition: opacity 0.6s ease;
       height: 1px;
-      background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--catppuccin-color-overlay2) 20%, transparent), transparent);
+      background: var(--catppuccin-color-overlay2);
     }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; translate: 0; }
       .color-swatch-block:hover { scale: 1; }
-      .btn-hover:hover { scale: 1; }
       .type-sample:hover { translate: 0; }
     }
   </style>
