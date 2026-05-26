@@ -207,6 +207,42 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </section>
 
+        <!-- ═══ CONTACT ═══ -->
+        <section class="wf-section" data-section="contact">
+          <div class="wf-label-group">
+            <span class="wf-label">Contact.vue</span>
+            <span class="wf-file">src/components/Contact.vue</span>
+            <span class="wf-data">src/data/contact.json</span>
+          </div>
+          <div class="wf-contact">
+            <div class="wf-section-badge">Contato</div>
+            <div class="wf-contact-layout">
+              <div class="wf-contact-text">
+                <div class="wf-contact-heading">Vamos trabalhar juntos?</div>
+                <div class="wf-contact-desc">
+                  Estou disponível para novos projetos, freelas e oportunidades.
+                  Me chame no email ou redes sociais.
+                </div>
+              </div>
+              <div class="wf-contact-actions">
+                <div class="wf-contact-email-box">
+                  <span class="wf-contact-email-label">Email</span>
+                  <a class="wf-contact-email-value" href="#">davyandrade.dev@gmail.com</a>
+                </div>
+                <div class="wf-contact-social">
+                  <span class="wf-social-circle">GH</span>
+                  <span class="wf-social-circle">LI</span>
+                  <span class="wf-social-circle">@</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wf-sidenote">
+            Layout flex horizontal · Email em destaque com label + value verde · Social links em círculos
+            <br />Sem formulário — apenas CTA direto para email e redes
+          </div>
+        </section>
+
         <!-- ═══ FOOTER ═══ -->
         <section class="wf-section" data-section="footer">
           <div class="wf-label-group">
@@ -809,6 +845,88 @@ import Layout from "../layouts/Layout.astro";
   .wf-timeline-desc {
     font-size: 0.6875rem;
     color: var(--catppuccin-color-overlay1);
+  }
+
+  /* ─── Contact ─── */
+  .wf-contact {
+    padding: 1.5rem;
+    background: var(--catppuccin-color-mantle);
+    border: 1px solid var(--catppuccin-color-surface1);
+    border-radius: 8px;
+  }
+
+  .wf-contact-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .wf-contact-text {
+    flex: 1;
+    min-width: 14rem;
+  }
+
+  .wf-contact-heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--catppuccin-color-text);
+    margin-bottom: 0.375rem;
+  }
+
+  .wf-contact-desc {
+    font-size: 0.8125rem;
+    color: var(--catppuccin-color-overlay1);
+    line-height: 1.6;
+  }
+
+  .wf-contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-end;
+  }
+
+  .wf-contact-email-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    text-align: right;
+  }
+
+  .wf-contact-email-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--catppuccin-color-overlay2);
+  }
+
+  .wf-contact-email-value {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--catppuccin-color-green);
+    text-decoration: none;
+  }
+
+  .wf-contact-social {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .wf-social-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--catppuccin-color-surface0);
+    border: 1px solid var(--catppuccin-color-surface1);
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--catppuccin-color-subtext0);
   }
 
   /* ─── Footer ─── */
