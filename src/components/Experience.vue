@@ -16,7 +16,9 @@ import content from "../data/experience.json";
       </div>
 
       <div class="relative pl-8">
-        <div class="absolute left-[11px] top-2 h-[calc(100%-1rem)] w-px bg-border-gray"></div>
+        <div
+          class="absolute left-[11px] top-2 h-[calc(100%-1rem)] w-px bg-border-gray"
+        ></div>
 
         <article
           v-for="item in content.items"
@@ -26,13 +28,26 @@ import content from "../data/experience.json";
           <div
             class="absolute -left-8 top-1.5 h-[9px] w-[9px] rounded-full border-2 border-surface bg-green"
           ></div>
-          <div class="rounded-lg border border-border-gray bg-surface-mid p-5 shadow-medium">
+          <div
+            class="rounded-lg border border-border-gray bg-surface-mid p-5 shadow-medium"
+          >
             <div
               class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"
             >
               <div>
                 <Typography variant="h3" as="h3">{{ item.role }}</Typography>
-                <Typography variant="muted" class="text-sm">{{ item.company }}</Typography>
+                <div class="flex items-center gap-2">
+                <Typography variant="muted" class="text-sm">{{
+                  item.company
+                }}</Typography>
+                  <span
+                    v-if="item.type"
+                    class="rounded-full bg-card-dark px-2 py-0.5 text-[0.55rem] font-semibold uppercase tracking-[0.15em] text-muted"
+                  >
+                    {{ item.type }}
+                  </span>
+                </div>
+
               </div>
               <Typography
                 variant="badge"
@@ -41,7 +56,10 @@ import content from "../data/experience.json";
                 {{ item.period }}
               </Typography>
             </div>
-            <Typography variant="body" class="mt-3 leading-relaxed text-near-white">
+            <Typography
+              variant="body"
+              class="mt-3 leading-relaxed text-near-white"
+            >
               {{ item.summary }}
             </Typography>
           </div>

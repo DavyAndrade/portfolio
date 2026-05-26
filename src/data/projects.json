@@ -3,18 +3,18 @@
   "items": [
     {
       "name": "OctoManager",
-      "description": "Painel de métricas com foco em leitura rápida e densidade visual controlada.",
-      "tags": ["Astro", "Vue", "Tailwind"]
+      "description": "Descrição em desenvolvimento...",
+      "tags": ["Next.js", "Tailwind", "Framer Motion", "Vitest", "Playwright"]
     },
     {
-      "name": "Orbit Docs",
-      "description": "Sistema de documentação com navegação objetiva e busca contextual.",
-      "tags": ["Vite", "TypeScript", "UI"]
+      "name": "FitCheck",
+      "description": "Descrição em desenvolvimento...",
+      "tags": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Echo Player",
-      "description": "Interface musical dark-first com microinteracoes e controles em pill.",
-      "tags": ["Vue", "Motion", "Design"]
+      "name": "TaskFlow",
+      "description": "Descrição em desenvolvimento...",
+      "tags": ["HTML", "CSS", "JavaScript", "Tailwind"]
     }
   ]
 }

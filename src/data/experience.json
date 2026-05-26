@@ -4,14 +4,16 @@
     {
       "role": "Desenvolvedor Front-end",
       "company": "Fundação Oswaldo Cruz (Fiocruz)",
+      "type": "Terceirizado",
       "period": "Mai 2026 - Momento",
-      "summary": "Arquitetura de componentes, padronizacao de UI e melhorias de performance em produtos SaaS."
+      "summary": "Descrição em desenvolvimento..."
     },
     {
       "role": "Desenvolvedor Front-end Júnior",
       "company": "FuzzyLab",
+      "type": "Estágio",
       "period": "Ago 2025 - Momento",
-      "summary": "Construcao de interfaces de alto contraste e integracao com design system."
+      "summary": "Descrição em desenvolvimento..."
     }
   ]
 }
