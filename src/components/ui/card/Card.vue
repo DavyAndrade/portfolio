@@ -51,7 +51,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <component :is="props.as" :class="cn(cardVariants({ variant: props.variant, padding: props.padding, hover: props.hover }), props.class)">
+  <component :is="props.as" v-bind="$attrs" :class="cn(cardVariants({ variant: props.variant, padding: props.padding, hover: props.hover }), props.class)">
     <slot />
   </component>
 </template>

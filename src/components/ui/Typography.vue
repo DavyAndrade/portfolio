@@ -49,7 +49,7 @@ const tagMap: Record<string, string> = {
 </script>
 
 <template>
-  <component :is="props.as || tagMap[props.variant]" :class="cn(typographyVariants({ variant: props.variant }), props.class)">
+  <component :is="props.as || tagMap[props.variant]" v-bind="$attrs" :class="cn(typographyVariants({ variant: props.variant }), props.class)">
     <slot />
   </component>
 </template>
