@@ -1,0 +1,17 @@
+{
+  "title": "Experiencia",
+  "items": [
+    {
+      "role": "Front-end Engineer",
+      "company": "Studio Norte",
+      "period": "2023 - Atual",
+      "summary": "Arquitetura de componentes, padronizacao de UI e melhorias de performance em produtos SaaS."
+    },
+    {
+      "role": "UI Developer",
+      "company": "Labs Meridian",
+      "period": "2021 - 2023",
+      "summary": "Construcao de interfaces de alto contraste e integracao com design system."
+    }
+  ]
+}

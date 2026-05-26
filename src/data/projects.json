@@ -1,0 +1,20 @@
+{
+  "title": "Projetos",
+  "items": [
+    {
+      "name": "Pulse Dashboard",
+      "description": "Painel de métricas com foco em leitura rápida e densidade visual controlada.",
+      "tags": ["Astro", "Vue", "Tailwind"]
+    },
+    {
+      "name": "Orbit Docs",
+      "description": "Sistema de documentação com navegação objetiva e busca contextual.",
+      "tags": ["Vite", "TypeScript", "UI"]
+    },
+    {
+      "name": "Echo Player",
+      "description": "Interface musical dark-first com microinteracoes e controles em pill.",
+      "tags": ["Vue", "Motion", "Design"]
+    }
+  ]
+}
